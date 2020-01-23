@@ -1,0 +1,38 @@
+<!doctype HTML>
+<html>
+
+	<head>
+		<title>Couter start/stop</title>
+				
+	</head>
+
+	<body>
+		<div id="content">
+		<h2>Couter</h2>
+		
+			<input type="button" value="Start" id="btnStart" />
+			<input type="text" id="display" /><br />
+			<input type="button" value="Stop" id="btnStop" />
+	
+			<script>
+				var start = document.getElementById('btnStart');
+				var stop = document.getElementById('btnStop');
+				var display = document.getElementById('display');
+				var id = null;
+	
+				btnStart.onclick = function(){
+					if(!id){
+					id = setInterval(function(){
+						display.value = Number(display.value)+1;
+					},100);
+				}
+				}
+				
+				btnStop.onclick = function (){
+					clearInterval(id);
+					id = null;
+				}
+			</script>
+		</div>
+	</body>
+</html>

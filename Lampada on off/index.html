@@ -1,0 +1,26 @@
+<!doctype HTML>
+<html>
+
+	<head>
+		<title>Lamp on/off</title>
+	</head>
+
+	<body>
+		
+		<img id="magic" src="images/lampada-off.gif">
+		
+	
+		<script>
+			var element = document.querySelector('#magic');
+
+			element.onclick = function(){
+				if (element.src.match('lampada-off')) {
+					element.src = 'images/lampada-on.gif';
+				}else {
+					element.src = 'images/lampada-off.gif';
+				}
+			};
+	
+		</script>
+	</body>
+</html>
